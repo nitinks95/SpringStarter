@@ -29,16 +29,16 @@
 <div class="container-sm">
 <br>
   <h3>Please fill the details -</h3>
-  <form action="/action" method="POST" class="needs-validation" novalidate>
+  <form action="/action" class="needs-validation" novalidate>
     <div class="form-group">
-      <label for="sname">Name:</label>
-      <input type="text" class="form-control" id="sName" placeholder="Enter name" name="sName" required>
+      <label for="name">Name:</label>
+      <input type="text" class="form-control" id="name" placeholder="Enter name" name="name" required>
       <div class="valid-feedback">Valid.</div>
       <div class="invalid-feedback">Please fill out this field.</div>
     </div>
     <div class="form-group">
-      <label for="sMessage">Message:</label>
-      <textarea class="form-control" placeholder="Enter Message"  name="sMessage" required></textarea>
+      <label for="msg">Message:</label>
+      <input type="text" class="form-control" id="msg" placeholder="Enter Message" name="msg" required>
       <div class="valid-feedback">Valid.</div>
       <div class="invalid-feedback">Please fill out this field.</div>
     </div>

@@ -28,8 +28,11 @@
 
 	<div class="container-sm">
 		<br>
- 		<h3>From <span th:text="${name}">name</span>,&nbsp; Your message is 
- 		<span th:text="${msg}">message</span>-</h3>
+ 		<h3>From <span th:text="${sName}">name:</span>,&nbsp; 
+ 		<br>
+ 		Your message is 
+ 		<span th:text="${sMessage}">message</span>-</h3><br>
+ 		<p> message_id= <span th:text="${lId}"></span></p>
  		<br>
  	</div>
  	

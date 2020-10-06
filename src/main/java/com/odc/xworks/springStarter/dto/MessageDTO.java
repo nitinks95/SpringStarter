@@ -1,4 +1,4 @@
-package com.odc.xworks.springStarter.entity;
+package com.odc.xworks.springStarter.dto;
 
 import javax.persistence.*;
 

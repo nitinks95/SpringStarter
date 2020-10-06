@@ -49,7 +49,7 @@
 <div class="container-sm">
 <br>
   <h3>Create a new Application -</h3>
-  <form action="/action" method="POST" class="needs-validation " novalidate>
+  <form action="/postApp" method="POST" class="needs-validation " novalidate>
   	<br />
     <div class="input-group">
 	    <div class="col-8">
@@ -106,7 +106,7 @@
 	    </div>
 	    <div class="col-1"></div>
 	    <div class="col" style="padding-top: 35px;">
-	      	  <input type="checkbox" class="form-check-input" value="">Is De-comissioned?</input>
+	      	  <input type="checkbox" class="form-check-input" id="isActive" name="isActive" value="">Is De-comissioned?</input>
 	    </div>
     </div>
     
@@ -126,7 +126,7 @@
 					      name="loc" />
 				    </div>
 				    <div class="col">
-				      	  <input type="checkbox" class="form-check-input" id="isActive" value="">Is Active?</input>
+				      	  <input type="checkbox" class="form-check-input" id="isActive" name="isActive" value="">Is Active?</input>
 				    </div>
 				    <button type="button" class="btn btn-info" style="align-content: right; 
 	     				position: absolute; right: 25px;" onclick="Javascript:addRow()">+</button>
@@ -146,9 +146,9 @@
 				    </thead>
 				    <tbody>
 				      <tr style="padding-top: 5px;">
-				        <td>Production</td>
-				        <td>0.0.0.0</td>
-				        <td>yes</td>
+				        <td><p id="listEnv" name="listEnv">Production</p></td>
+				        <td><p id="listLoc" name="listLoc">0.0.0.0</p></td>
+				        <td><p id="isActiveCheck" name="isActiveCheck">yes</p></td>
 				        <td><button type="button" class="btn btn-danger" onClick="Javacsript:deleteRow(this)">Delete</button></td>
 				      </tr>
 				    </tbody>

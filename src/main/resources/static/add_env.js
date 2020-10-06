@@ -13,9 +13,9 @@ function addRow() {
     var rowCount = table.rows.length;
     var row = table.insertRow(rowCount);
  
-    row.insertCell(0).innerHTML= env.value;
-    row.insertCell(1).innerHTML= loc.value;
-    row.insertCell(2).innerHTML= actVal.value;
+    row.insertCell(0).innerHTML= '<p id="listEnv" name="listEnv">' + env.value + '</p>';
+    row.insertCell(1).innerHTML= '<p id="listLoc" name="listLoc">' + loc.value + '</p>';
+    row.insertCell(2).innerHTML= '<p id="isActiveCheck" name="isActiveCheck">' + actVal.value + '</p>';
     row.insertCell(3).innerHTML= '<button type="button" class="btn btn-danger" value="Delete" onClick="Javacsript:deleteRow(this)">Delete</button>';
  
 }

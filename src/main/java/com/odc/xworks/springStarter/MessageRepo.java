@@ -1,13 +1,9 @@
 package com.odc.xworks.springStarter;
 
-import java.util.List;
+import org.springframework.data.jpa.repository.JpaRepository;
 
-import org.springframework.data.repository.CrudRepository;
+import com.odc.xworks.springStarter.entity.MessageDTO;
 
-import com.odc.xworks.springStarter.entity.Message;
-
-public interface MessageRepo extends CrudRepository<Message, Long>{
+public interface MessageRepo extends JpaRepository<MessageDTO, Long>{
 	
-	List<Message> findBysName(String sName);
-	Message findBylId(long lId);
 }

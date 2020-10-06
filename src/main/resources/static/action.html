@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="ISO-8859-1">
@@ -14,15 +13,35 @@
     height: 200px;
     background: #aaa;
   }
+  .titletag {
+  	padding-left: 100px;
+  	font-family: "Lucida Console", Courier, monospace;
+  	font-weight: bold;
+  	font-size: 20px;
+  }
+  .rightFull {
+	  position: absolute;
+	  align-content: right;
+	  padding-right: 100px;
+	  right: 0px;
+	}
   </style>
 </head>
 <body>
 
 	<nav class="navbar navbar-expand-sm bg-primary navbar-dark">
 	 	 <ul class="navbar-nav">
-			<li class="nav-item active">
+			<li class="nav-item active titletag">
 		      	<a class="nav-link" href="#">X-Works</a>
 		    </li>
+		    <ul class="navbar-nav rightFull">
+			    <li class="nav-item">
+			      	<a class="nav-link" href="/createApp">Application Management</a>
+			    </li>
+			    <li class="nav-item">
+			      	<a class="nav-link" href="#">Console</a>
+			    </li>
+			 </ul>
 		</ul>
 	</nav>
 
@@ -36,6 +55,7 @@
  		<br>
  	</div>
  	
+
  	<div class="bg-primary text-white text-center" style="margin-bottom:0">
 	  	<p>Copyrights X-works 2020</p>
 	</div>

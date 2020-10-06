@@ -1,26 +1,31 @@
 package com.odc.xworks.springStarter.entity;
 
+import javax.persistence.*;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.odc.xworks.springStarter.SpringStarterApplication;
 
-public class Message {
+@Entity
+public class MessageDTO {
 	
 	private static final Logger log = LoggerFactory.getLogger(SpringStarterApplication.class);
 	
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Long lId;
 	private String sName;
 	private String sMessage;
 	
-		public Message(String sName, String sMessage) {
+		public MessageDTO(String sName, String sMessage) {
 		super();
 		this.sName = sName;
 		this.sMessage = sMessage;
 		log.info(" --- inserted " + this.toString() + "successfully --- ");
 	}
 		
-	protected Message() {}	
+	protected MessageDTO() {}	
 	
 	public Long getlId() {
 		return lId;

@@ -1,9 +1,14 @@
 package com.odc.xworks.springStarter.dto;
 
+import java.util.Set;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -26,6 +31,10 @@ public class ApplicationDTO {
 	private String sIsDecommisioned;
 	private String sTLName;
 	private String sTeamMail;
+	
+	@OneToMany(mappedBy = "application", fetch = FetchType.LAZY,
+            cascade = CascadeType.ALL)
+    private Set<EnvironmentDTO> envList;
 	
 	public ApplicationDTO(Long lAppId, String sAppName, String sVersion, String sLastRelease, String sNextRelease,
 			String sDevDate, String sIsDecommisioned, String sTLName, String sTeamMail) {

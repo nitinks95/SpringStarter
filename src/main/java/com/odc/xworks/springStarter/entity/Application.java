@@ -1,5 +1,7 @@
 package com.odc.xworks.springStarter.entity;
 
+import java.util.List;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -16,14 +18,13 @@ public class Application {
 	private String sNextRelease;
 	private String sDevDate;
 	private String sIsDecommisioned;
-	private String myTableData;
+	private List<Environment> myTableData;
 	private String sTLName;
 	private String sTeamMail;
 	
-	public Application(Long lAppId, String sAppName, String sVersion, String sLastRelease, String sNextRelease,
-			String sDevDate, String sIsDecommisioned, String myTableData, String sTLName, String sTeamMail) {
+	public Application(String sAppName, String sVersion, String sLastRelease, String sNextRelease,
+			String sDevDate, String sIsDecommisioned, List<Environment> myTableData, String sTLName, String sTeamMail) {
 		super();
-		this.lAppId = lAppId;
 		this.sAppName = sAppName;
 		this.sVersion = sVersion;
 		this.sLastRelease = sLastRelease;
@@ -78,10 +79,10 @@ public class Application {
 	public void setsIsDecommisioned(String sIsDecommisioned) {
 		this.sIsDecommisioned = sIsDecommisioned;
 	}
-	public String getmyTableData() {
+	public List<Environment> getmyTableData() {
 		return myTableData;
 	}
-	public void setmyTableData(String myTableData) {
+	public void setmyTableData(List<Environment> myTableData) {
 		this.myTableData = myTableData;
 	}
 	

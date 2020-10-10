@@ -32,14 +32,14 @@ public class ApplicationDTO {
 	private String sTLName;
 	private String sTeamMail;
 	
-	@OneToMany(mappedBy = "application", fetch = FetchType.LAZY,
-            cascade = CascadeType.ALL)
-    private Set<EnvironmentDTO> envList;
+	/*
+	 * @OneToMany(mappedBy = "application", fetch = FetchType.LAZY, cascade =
+	 * CascadeType.ALL) private Set<EnvironmentDTO> envList;
+	 */
 	
-	public ApplicationDTO(Long lAppId, String sAppName, String sVersion, String sLastRelease, String sNextRelease,
+	public ApplicationDTO(String sAppName, String sVersion, String sLastRelease, String sNextRelease,
 			String sDevDate, String sIsDecommisioned, String sTLName, String sTeamMail) {
 		super();
-		this.lAppId = lAppId;
 		this.sAppName = sAppName;
 		this.sVersion = sVersion;
 		this.sLastRelease = sLastRelease;

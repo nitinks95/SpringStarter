@@ -29,15 +29,21 @@ public class EnvironmentDTO {
 	    @JoinColumn(name = "lAppId", nullable = false)
 	    private ApplicationDTO app;
 	
-	public EnvironmentDTO(Long lEnvId, Long lAppId, String sEnvName, String sLocationId, Boolean bIsActive) {
+	public EnvironmentDTO(ApplicationDTO app, String sEnvName, String sLocationId, Boolean bIsActive) {
 		super();
-		this.lEnvId = lEnvId;
 		this.sEnvName = sEnvName;
 		this.sLocationId = sLocationId;
 		this.bIsActive = bIsActive;
+		this.app = app;
 		log.info(" --- inserted Environment " + this.toString() + "successfully --- ");
 	}
 	
+	public ApplicationDTO getApp() {
+		return app;
+	}
+	public void setApp(ApplicationDTO app) {
+		this.app = app;
+	}
 	public Long getlEnvId() {
 		return lEnvId;
 	}

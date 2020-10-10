@@ -16,9 +16,8 @@ public class Environment {
 	private String sLocationId;
 	private Boolean bIsActive;
 	
-	public Environment(Long lEnvId, Long lAppId, String sEnvName, String sLocationId, Boolean bIsActive) {
+	public Environment(Long lAppId, String sEnvName, String sLocationId, Boolean bIsActive) {
 		super();
-		this.lEnvId = lEnvId;
 		this.lAppId = lAppId;
 		this.sEnvName = sEnvName;
 		this.sLocationId = sLocationId;
